@@ -5,7 +5,7 @@ const cors = require('cors');
 const downloaderRouter = require('./routes/downloader.js');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 8080 || 5000 || 3000
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
